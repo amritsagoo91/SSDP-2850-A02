@@ -1,0 +1,18 @@
+Tools used: ChatGpt
+
+
+How AI Was Used:
+I used ChatGPT to convert my existing Sunset theme into a Night theme.
+I provided my original style.css file and asked ChatGPT to transform the colors,
+gradients, and overall aesthetic to create a night-time design while preserving
+the structure, semantics, and accessibility of my form.
+ChatGPT assisted in selecting appropriate color palettes,contrast,
+and gradient effects to achieve a visually appealing and accessible night scene.
+
+How Assignment 02 Helped Me Understand Git and GitHub:
+Before Lecture 2, I only knew the basics of Git and would always push my projects
+directly to the main branch without tracking changes over time. 
+This lecture helped me gain a deeper understanding of using branches and how to merge them
+effectively. I learned how to add new code or features to my project using separate branches,
+which allows me to manage changes safely and keep my main branch stable.
+
