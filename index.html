@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Sign-Up Form</title>
+  </head>
+
+  <body>
+    <main class="form-container">
+      <form action="#" method="post">
+        <h1>SignUp</h1>
+        <!-- Account Info -->
+        <fieldset>
+          <legend><span class="number">1</span> Account Info</legend>
+          <br />
+          <div class="input-container">
+            <label for="fullName" hidden>First name:</label>
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Full Name..."
+              required
+            />
+
+            <label for="email" hidden>Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address..."
+              required
+              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/"
+              title="Enter a valid email address (example@example.com)"
+            />
+
+            <label for="password" hidden>Password:</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password..."
+              minlength="12"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{12,}$"
+              title="Must be at least 12 characters long and include uppercase, lowercase, number, and symbol."
+              required
+            />
+          </div>
+
+          <p>Minimum 12 Characters.</p>
+          <p>Must include uppercase, lowercase, number, and symbol.</p>
+        </fieldset>
+
+        <!-- Dev Skills -->
+        <fieldset>
+          <legend><span class="number">2</span> Dev Skills</legend>
+
+          <article>
+            <h3>Core Languages</h3>
+            <div class="dev-skills">
+              <div class="container">
+                <label>
+                  <input type="checkbox" value="javascript" />
+                  JavaScript
+                </label>
+
+                <label>
+                  <input type="checkbox" value="css" />
+                  CSS
+                </label>
+              </div>
+
+              <div class="container">
+                <label>
+                  <input type="checkbox" value="html" />
+                  HTML
+                </label>
+
+                <label>
+                  <input type="checkbox" value="php" />
+                  PHP
+                </label>
+              </div>
+              <div class="container">
+                <label>
+                  <input type="checkbox" value="cSharp" />
+                  C#
+                </label>
+
+                <label>
+                  <input type="checkbox" value="kotlin" />
+                  Kotlin
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <h3>Libraries/Frameworks</h3>
+            <div class="dev-skills">
+              <label><input type="checkbox" value="react" /> React</label>
+              <label><input type="checkbox" value="angular" /> Angular</label>
+              <label><input type="checkbox" value="vue" /> Vue.js</label>
+            </div>
+          </article>
+
+          <article>
+            <h3>Dev Ops</h3>
+            <div class="dev-skills">
+              <label><input type="checkbox" value="git" /> Git</label>
+              <label><input type="checkbox" value="gulp" /> Gulp</label>
+              <label><input type="checkbox" value="docker" /> Docker</label>
+            </div>
+          </article>
+        </fieldset>
+
+        <!-- Experience -->
+        <fieldset>
+          <legend><span class="number">3</span> Experience</legend>
+          <article>
+            <h3>Experience Level</h3>
+            <div class="dev-skills">
+              <label>
+                <input type="radio" name="experience" value="beginner" />
+                Beginner
+              </label>
+
+              <label>
+                <input type="radio" name="experience" value="intermediate" />
+                Intermediate
+              </label>
+
+              <label>
+                <input type="radio" name="experience" value="advanced" />
+                Advanced
+              </label>
+            </div>
+          </article>
+        </fieldset>
+
+        <!-- Other Information -->
+        <fieldset>
+          <legend><span class="number">4</span> Other</legend>
+          <article>
+            <h2>Referral Source</h2>
+            <label for="other">How did you hear about us?</label>
+            <select name="other" id="other">
+              <option>Please Select..</option>
+              <optgroup label="Person">
+                <option value="friend">Friend</option>
+                <option value="family">Family</option>
+                <option value="colleague">Colleague</option>
+              </optgroup>
+              <optgroup label="Media">
+                <option value="internet">Internet</option>
+                <option value="radio">Radio</option>
+                <option value="tv">TV</option>
+                <option value="newspaper">Newspaper</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="magic">Magic!</option>
+                <option value="other">Other...</option>
+              </optgroup>
+            </select>
+
+            <div id="details-container" hidden>
+              <label for="details">Details, please:</label>
+              <input type="text" id="details" placeholder="Do tell!" />
+            </div>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+          </article>
+
+          <div class="buttons">
+            <button class="submit" type="submit">Submit</button>
+            <button class="reset" type="reset">Clear Form</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer class="site-footer">&copy; 2025 Amrit Singh</footer>
+  </body>
+</html>
