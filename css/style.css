@@ -5,18 +5,23 @@ body {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(254, 191, 154, 1) 0%,
-    rgba(247, 50, 24, 1) 100%
-  );
-  background-size: auto;
+
+  /* NIGHT SCENE: deep sky + subtle glow */
+  background: radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 200, 0.35) 0%,
+      rgba(0, 0, 0, 0) 60%
+    ),
+    linear-gradient(180deg, rgba(10, 14, 36, 1) 0%, rgba(3, 4, 14, 1) 100%);
+
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: "Roboto Slab", serif;
   margin: 0;
 }
+
 h1 {
-  color: #153c6d;
+  color: #cde4ff;
   font-size: 2rem;
   display: inline-block;
   position: relative;
@@ -31,20 +36,22 @@ h1::after {
   bottom: -8px;
   width: 90%;
   height: 2px;
-  background-color: #153c6d;
+  background-color: #cde4ff;
   box-shadow: 1px 1px 3px #000;
 }
 
 .form-container {
-  background-color: #ffff;
+  background-color: #101827;
   width: 100%;
   height: auto;
   max-width: 600px;
   padding: 30px 20px;
   margin: 30px;
   border-radius: 1rem;
-  box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 60%);
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.8);
+  color: #e2e8f0;
 }
+
 form {
   padding: 0 20px;
   max-width: 100%;
@@ -54,19 +61,20 @@ form {
   width: 40px;
   height: 40px;
   display: flex;
-  color: #ffff;
+  color: #fff;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-color: #153c6d;
+  background-color: #4b6cb7;
   margin: 0 5px;
 }
 
 fieldset {
   border: none;
-  border-top: 1px solid #000;
+  border-top: 1px solid #334155;
   margin-bottom: 10px;
 }
+
 legend {
   display: flex;
   align-items: center;
@@ -84,23 +92,27 @@ select,
   width: 100%;
   height: 3rem;
   font-size: large;
-  background-color: rgb(232, 238, 239);
+  background-color: #1e293b;
+  color: #e2e8f0;
   border: none;
   padding-left: 10px;
   border-radius: 0.5rem;
   margin-bottom: 10px;
 }
+
 p {
   line-height: 0;
   margin-top: 0;
   font-style: italic;
+  color: #94a3b8;
 }
 
 textarea {
   width: 100%;
   min-height: 10rem;
   font-size: large;
-  background-color: rgb(232, 238, 239);
+  background-color: #1e293b;
+  color: #e2e8f0;
   border: none;
   padding: 10px;
   border-radius: 0.5rem;
@@ -113,6 +125,7 @@ textarea {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  color: #e2e8f0;
 }
 
 .container {
@@ -135,23 +148,24 @@ button {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-button {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
 .buttons .submit {
-  background-color: rgb(21, 60, 109);
+  background-color: #1e40af; /* deep blue */
   color: #fff;
   font-size: 1.25rem;
 }
+
 .buttons .reset {
-  background-color: #ffff;
-  color: rgb(255, 34, 0);
+  background-color: #0f172a;
+  color: #f87171;
   font-size: 1.25rem;
-  border: 1px solid #000;
+  border: 1px solid #334155;
 }
+
 .site-footer {
   position: relative;
   text-align: right;
@@ -159,4 +173,5 @@ button {
   bottom: 10px;
   right: 20px;
   font-size: 16px;
+  color: #cbd5e1;
 }
